@@ -1,0 +1,60 @@
+html, body {
+    font-family: Arial, "微軟正黑體", Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+@each $keyname in $frame_lists {
+    .#{$keyname} {
+        width: 100%;
+        height: auto;
+
+        & > .#{$keyname}_wrap {
+            width: 1024px;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+//header
+.header {
+    height: 60px;
+    background: $red-fa;
+}
+
+//navs
+.navs {
+    height: 45px;
+    background: $gray-3d;
+
+    & > &_wrap { 
+        position: relative; 
+        
+    }
+}
+
+//content
+.content {
+    & > &_wrap {
+        position: relative;
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+//footer
+.footer {
+    height: 60px;
+    background: $gray-3d;
+    & > &_wrap p {
+        display: block;
+        width: 100%;
+        height: 60px;
+
+        line-height: 60px;
+        text-align: center;
+        font-size: $font-size;
+        color: #fff;
+    }
+}
