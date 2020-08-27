@@ -1,0 +1,25 @@
+.panel_list {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+    ul.panel_list_content {
+        display: block;
+        width: 100%;
+        height: auto;
+        @include pie-clearfix;
+
+        & > li {
+            @include float(left);
+            display: inline-block;
+            height: auto;
+            margin-left: 10px;
+
+            &:first-child { margin-left: 0px; }
+
+            &.col-4 { width: calc(50% - 10px); }
+            &.col-2 { width: calc(25% - 5px); }
+        }
+    }
+}

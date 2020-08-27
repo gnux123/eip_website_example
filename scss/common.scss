@@ -3,5 +3,9 @@
 @import "_vars";
 
 //common modules
-@import "common/base";
-@import "common/navs";
+@import "common/_base";
+@import "common/_navs";
+
+
+//box modules
+@import "modules/_boxs";

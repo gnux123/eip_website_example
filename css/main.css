@@ -1,0 +1,39 @@
+.panel_list {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.panel_list ul.panel_list_content {
+  display: block;
+  width: 100%;
+  height: auto;
+  *zoom: 1;
+}
+
+.panel_list ul.panel_list_content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.panel_list ul.panel_list_content > li {
+  display: inline;
+  float: left;
+  display: inline-block;
+  height: auto;
+  margin-left: 10px;
+}
+
+.panel_list ul.panel_list_content > li:first-child {
+  margin-left: 0px;
+}
+
+.panel_list ul.panel_list_content > li.col-4 {
+  width: calc(50% - 10px);
+}
+
+.panel_list ul.panel_list_content > li.col-2 {
+  width: calc(25% - 5px);
+}
