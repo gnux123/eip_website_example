@@ -1,0 +1,54 @@
+.timebar {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &_wrap {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 16px;
+        overflow: hidden;
+    
+        @include border-radius(4px);
+        background: $gray-ee;
+    }
+
+    &_percent {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        background: $blue-02;
+    }
+
+    //timebar_text
+    p.timebar_text {
+        position: fixed;
+        display: inline-block;
+        margin-top: 20px;
+        
+        font-size: 10px;
+        font-weight: lighter;
+        letter-spacing: 0.5px;
+
+        & > span { font-size: 14px; }
+
+        &.blue > span { color: $blue-02; }
+
+        &.timebar_tips {
+            z-index: 2;
+            // @include box-shadow(0 0)
+        }
+
+        &.total_time {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+
+}

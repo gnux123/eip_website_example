@@ -234,6 +234,274 @@ a.btn_checkin {
   box-sizing: border-box;
 }
 
+.panel_toolbox {
+  position: relative;
+  height: 100%;
+}
+
 .panel_toolbox h3 {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
   letter-spacing: 1px;
+}
+
+.form_sign .panel_toolbox .btn_general {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.form_sign .panel_toolbox .waiting_events {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  *zoom: 1;
+}
+
+.form_sign .panel_toolbox .waiting_events:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form_sign .panel_toolbox .waiting_events > p {
+  display: inline-block;
+}
+
+.form_sign .panel_toolbox .waiting_events > p:first-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form_sign .panel_toolbox .waiting_events > p:first-child + p {
+  display: inline;
+  float: right;
+}
+
+.form_sign .panel_toolbox .waiting_events > p:first-child + p > span {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #FA4D56;
+}
+
+.today_checkin .panel_toolbox .btn_turns {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.today_checkin .checkin_time {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.today_checkin .checkin_time .on_work,
+.today_checkin .checkin_time .off_work {
+  display: inline-block;
+  width: 48%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.today_checkin .checkin_time .on_work > span.time,
+.today_checkin .checkin_time .off_work > span.time {
+  display: inline-block;
+  padding: 0 3px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+}
+
+.today_checkin .checkin_time .on_work > span.time.bold,
+.today_checkin .checkin_time .off_work > span.time.bold {
+  font-weight: bolder;
+}
+
+.today_checkin .checkin_time .on_work {
+  width: calc(50% - 1px);
+  border-right: 1px solid #3D4C5A;
+}
+
+.daysoff_view .panel_toolbox .btn_general {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.daysoff_view .panel_toolbox .daysoff_group {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  *zoom: 1;
+}
+
+.daysoff_view .panel_toolbox .daysoff_group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.daysoff_view .panel_toolbox .daysoff_group > li {
+  display: inline;
+  float: left;
+  display: inline-block;
+  width: calc((100% / 3) - 6px);
+  height: auto;
+  margin-left: 9px;
+  padding-bottom: 15px;
+}
+
+.daysoff_view .panel_toolbox .daysoff_group > li:first-child {
+  margin-left: 0px;
+}
+
+.daysoff_view .panel_toolbox .daysoff_group > li .daysoff_title {
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 14px;
+}
+
+.btn_general {
+  display: inline-block;
+  height: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.btn_general > span {
+  display: inline-block;
+  height: 100%;
+  padding: 0 10px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: #000;
+}
+
+.btn_turns {
+  position: relative;
+  display: inline-block;
+  padding-left: 51px;
+}
+
+.btn_turns:before, .btn_turns:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+}
+
+.btn_turns:before {
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 24px;
+  border-radius: 24px;
+  background: #8d8d8d;
+}
+
+.btn_turns:after {
+  left: 3px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #E0E0E0;
+}
+
+.btn_turns > span {
+  position: relative;
+  display: inline-block;
+  height: 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.btn_turns > span:before {
+  content: "隱藏";
+}
+
+.btn_turns.active:before {
+  background: #2E8D14;
+}
+
+.btn_turns.active:after {
+  left: 26px;
+  background: #fff;
+}
+
+.btn_turns.active > span {
+  color: #000;
+}
+
+.btn_turns.active > span:before {
+  content: "開啟";
+}
+
+.timebar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.timebar_wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #EEEEEE;
+}
+
+.timebar_percent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  background: #0275D8;
+}
+
+.timebar p.timebar_text {
+  position: fixed;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+}
+
+.timebar p.timebar_text > span {
+  font-size: 14px;
+}
+
+.timebar p.timebar_text.blue > span {
+  color: #0275D8;
+}
+
+.timebar p.timebar_text.timebar_tips {
+  z-index: 2;
+}
+
+.timebar p.timebar_text.total_time {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
